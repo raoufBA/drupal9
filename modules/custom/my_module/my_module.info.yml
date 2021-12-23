@@ -1,0 +1,5 @@
+name: My Firt Development Module
+description: A custom Development Module
+type: module
+core_version_requirement: ^8.9 || ^9
+package: Custom

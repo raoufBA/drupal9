@@ -1,0 +1,6 @@
+my_content.newpage:
+  title: 'My Module'
+  discription: 'Link to custom menu'
+  route_name: my_module.content
+  menu_name: main
+  weight: 10

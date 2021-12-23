@@ -1,0 +1,11 @@
+resvplist administer:
+  title: 'Administrer RSVP module'
+  description: 'Form to administror RSVP module'
+  restrict access: true
+rsvplist consult report:
+  title: 'Consult list of RSVP'
+  description: 'list of RSVP'
+rsvplist view form:
+  title: 'view form RSVP'
+  description: 'person who view RSVP Form'
+

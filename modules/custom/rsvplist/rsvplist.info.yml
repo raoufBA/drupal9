@@ -1,0 +1,5 @@
+name: RSVP List
+description: RSVP to subimit all inscriptions for event and consult all list for administrators
+type: module
+core_version_requirement: ^8.8 || ^9
+package: RSVP List

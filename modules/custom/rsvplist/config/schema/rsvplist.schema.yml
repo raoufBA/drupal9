@@ -1,0 +1,13 @@
+rsvplist_admin.settings:
+  label: 'RSVP list settings'
+  type: config_object
+  mapping:
+   content_types:
+     type: sequence
+     label : 'Content types RSVP Form can display on'
+     sequence:
+       label: 'Content type'
+       type: string
+   enabled:
+     type: string
+     label: 'Enable RSVP form to node'

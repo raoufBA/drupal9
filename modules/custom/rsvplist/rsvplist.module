@@ -1,0 +1,51 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * @file
+ * Contains \Drupal\rsvplist\rsvplist.module
+ */
+function rsvplist_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id)
+{
+
+
+  $config = array_values(\Drupal::config(\Drupal\rsvplist\Form\RSVPSettingsForm::CONFIG_NAME)->get('content_types'));
+  $node = $form_state->getFormObject()->getEntity();
+  if (in_array($node->getType(), $config)) {
+    $form['rsvplist'] = [
+      '#type' => 'details',
+      '#title' => t('RSVP Setting'),
+      '#group' => 'advanced',
+      '#access' => \Drupal::currentUser()->getAccount()->hasPermission('resvplist administer'),
+      '#weight' => 100
+    ];
+    $form['rsvplist'] ['rsvplist_enabled'] = [
+      '#type' => 'checkbox',
+      '#title' => t('Active RSVP form to this node'),
+      '#default_value' => \Drupal::service('rsvplist.enabler')->isEnabled($node->id())
+    ];
+    foreach ($form['actions'] as $key => $value) {
+      if ($key == 'submit' && isset($value['#submit'])) {
+        $form['actions']['submit']['#submit'][] = 'resvplist_form_submit';
+      }
+    }
+  }
+}
+
+function resvplist_form_submit(array $form, FormStateInterface $form_sate)
+{
+
+  $enable = $form_sate->getValue('rsvplist_enabled');
+  $nid = $form_sate->getValue('nid');
+  if ($enable) {
+    \Drupal::service('rsvplist.enabler')->enable($nid);
+  } else {
+    \Drupal::service('rsvplist.enabler')->disable($nid);
+  }
+
+
+  \Drupal::messenger()->addMessage(t('Activate RSVP Form'), \Drupal\Core\Messenger\MessengerInterface::TYPE_STATUS);
+}
+
+

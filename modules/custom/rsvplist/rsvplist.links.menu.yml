@@ -1,0 +1,13 @@
+rsvplist.admin_settings:
+  route_name: 'rsvplist.admin_settings'
+  title: 'RSVP list Settings'
+  description: 'Administer RSVP Form'
+  parent: 'system.admin_config_content'
+  weight: 10
+
+rsvplist.amin_report:
+  route_name: 'rsvplist.report'
+  title: 'RSVP Report'
+  description: 'List of RSVP for event'
+  parent: 'system.admin_reports'
+  weight: 10
