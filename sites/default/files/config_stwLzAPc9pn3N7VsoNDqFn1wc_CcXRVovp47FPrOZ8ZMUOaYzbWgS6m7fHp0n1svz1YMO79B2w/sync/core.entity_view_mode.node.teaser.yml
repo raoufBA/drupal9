@@ -1,0 +1,12 @@
+uuid: 662c7dac-7a83-4afc-807c-135d7654f4cd
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: Mz9qWr1kUYK0mjRAGDsr5XS6PvtZ24en_7ndt-pyWe4
+id: node.teaser
+label: Accroche
+targetEntityType: node
+cache: true

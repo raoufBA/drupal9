@@ -1,0 +1,20 @@
+uuid: 398cff41-39ed-48f9-bdef-76cb581485ab
+langcode: fr
+status: true
+dependencies:
+  module:
+    - rsvplist
+  theme:
+    - bartik
+id: rvpformblock
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: rsviplist_bloc
+settings:
+  id: rsviplist_bloc
+  label: 'RVP Form Block'
+  provider: rsvplist
+  label_display: visible
+visibility: {  }

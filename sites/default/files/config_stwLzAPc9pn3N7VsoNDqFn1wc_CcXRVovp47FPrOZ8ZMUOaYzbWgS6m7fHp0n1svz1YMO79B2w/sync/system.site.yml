@@ -1,0 +1,14 @@
+uuid: 89f0e5b6-53f4-4206-9319-c9bcb3d3c5f9
+name: drupal9
+mail: belanes.raouf@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: fr
+default_langcode: fr
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE

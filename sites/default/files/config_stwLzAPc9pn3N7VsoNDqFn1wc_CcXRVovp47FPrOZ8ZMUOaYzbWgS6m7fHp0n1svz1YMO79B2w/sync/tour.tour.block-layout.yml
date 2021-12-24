@@ -1,0 +1,48 @@
+uuid: 21a823c5-9e22-4b65-b268-a999a1cc2828
+langcode: fr
+status: true
+dependencies:
+  module:
+    - block
+_core:
+  default_config_hash: nU1OPAfeA3n0XjVOQ8RfAnSxyv4iTjZn7yBCj0MH9Jg
+id: block-layout
+label: 'Page de Mise en page du Bloc'
+module: block
+routes:
+  -
+    route_name: block.admin_display
+tips:
+  block-layout:
+    id: block-layout
+    plugin: text
+    label: 'Mise en page du Bloc'
+    body: 'Les blocs sont des boîtes de contenu qui peuvent être affichées dans des régions (telles que le pied de page ou la barre latérale) de votre page.'
+    weight: 1
+  place-block:
+    id: place-block
+    plugin: text
+    label: 'Placer des blocs'
+    body: 'Tout bloc personnalisé ou contribué peut être ajouté à une région particulière en cliquant sur un bouton Positionner un bloc. Un nouveau bloc peut également être créé en cliquant sur Positionner un bloc'
+    weight: 2
+    selector: .button--small
+  block-region:
+    id: block-region
+    plugin: text
+    label: 'Région du Bloc'
+    body: 'Attribuer ou modifier la région d''un bloc en cliquant ici. Une liste déroulante avec toutes les régions apparaîtra. Vous pouvez placer un bloc dans plusieurs régions.'
+    weight: 3
+    selector: .block-region-select
+  configure-block:
+    id: configure-block
+    plugin: text
+    label: 'Configurer le bloc'
+    body: 'En cliquant sur «Configurer», vous pouvez modifier le contenu du bloc, gérer ses paramètres de visibilité et même changer son emplacement dans votre thème.'
+    weight: 4
+    selector: .dropbutton-widget
+  custom-block-library:
+    id: custom-block-library
+    plugin: text
+    label: 'Bibliothèque des blocs personnalisés'
+    body: 'L''écran de gestion des blocs a également un autre onglet en haut qui est utilisé pour ajouter des blocs personnalisés. Le nom de l''onglet est "Bibliothèque de blocs personnalisés". Cet onglet fournit un lien pour ajouter des blocs personnalisés.'
+    weight: 5
